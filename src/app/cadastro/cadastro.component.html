@@ -1,0 +1,81 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            CADASTRO DE CLIENTES
+        </div>
+        <div class="col-md-6">
+            <a class="btn btn-sm btn-primary" href="/lista" style="color: white;">VER LISTA DE CLIENTES</a>
+        </div>
+
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <table>
+                <tbody>
+                    <tr>
+                        <td><label for="nome">Nome</label> </td>
+                        <td><input type="text" name="nome" id="nome" class="form-control" [(ngModel)]=clientes.nome></td>
+
+                        <td>Telefone</td>
+                        <td>
+                            <input type="text" class="form-control" name="telefone" [(ngModel)]=clientes.telefone>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Cadastro:</td>
+                        <td>
+                            <select name="cad_pessoa" [(ngModel)]=clientes.cad_pessoa class="form-control">
+                                <option value=""></option>
+                                <option value="pf" id="pf">Pessoa Física</option>
+                                <option value="pj" id="pj">Pessoa Jurídica</option>
+                             </select>
+                        </td>
+                        <td>CPF/CNPJ: </td>
+                        <td><input type="text" class="form-control" name="cpfcnpj" [(ngModel)]=clientes.cpfcnpj></td>
+                    </tr>
+                    <tr>
+                        <td>Data de Nascimento:</td>
+                        <td><input type="text" class="form-control" name="datanascimento" [(ngModel)]=clientes.datanascimento></td>
+
+                        <td>Status:</td>
+                        <td name="status"><select name="status" class="form-control" id="status" [(ngModel)]=clientes.status>
+                            <option value=""></option>
+                            <option value="ativo">Ativo</option>
+                            <option value="inativo">Inativo</option>
+                        </select></td>
+                    </tr>
+                </tbody>
+            </table>
+            <table id="endereco">
+                <thead>
+                    <th style="margin-bottom:45px;">Endereço Primário </th>
+                </thead>
+
+                <tr>
+                    <td>Rua: </td>
+                    <td><input type="text" name="rua" [(ngModel)]=clientes.rua class="form-control"></td>
+                    <td>Numero</td>
+                    <td><input type="text" name="numero" [(ngModel)]=clientes.numero class="form-control"></td>
+                </tr>
+                <tr>
+                    <td>Complemento</td>
+                    <td><input type="text" name="complemento" [(ngModel)]=clientes.complemento class="form-control">
+                    </td>
+                    <td>Bairro</td>
+                    <td><input type="text" name="bairro" [(ngModel)]=clientes.bairro class="form-control"></td>
+                </tr>
+                <tr>
+                    <td>CEP:</td>
+                    <td name="cep"><input type="text" [(ngModel)]=clientes.cep class="form-control"></td>
+                    <td>Cidade:</td>
+                    <td><input type="text" name="cidade" [(ngModel)]=clientes.cidade class="form-control"></td>
+                    <td>Estado:</td>
+                    <td><input type="text" name="estado" [(ngModel)]=clientes.estado class="form-control"></td>
+                </tr>
+            </table>
+            <div class="row">
+                <button class="btn btn-success" (click)="adicionar()">Salvar</button>
+            </div>
+        </div>
+    </div>
+</div>

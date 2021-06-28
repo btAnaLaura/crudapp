@@ -1,0 +1,34 @@
+Desenvolvimento de um cadastro de pessoas, esse cadastro deve permitir inserir vários endereços para uma mesma pessoa.
+Deve existir uma tela de filtros e listagem das pessoas cadastradas.
+Os filtros devem ser:
+Nome, CPF, CEP e Status (Ativo, Inativo e Todos)
+O filtro de Status deve por padrão vir com o campo Ativo Selecionado.
+
+Deve-se permitir a Inclusão e Edição de novas pessoas.
+Não deve ser permitido a exclusão as pessoas devem ser apenas inativadas e nunca excluídas.
+Os endereços relacionados as pessoas devem permitir inclusão, edição e exclusão
+
+O cadastro de cliente deve possuir os seguintes campos:
+
+- Nome
+- CPF / CNPJ (Validar se o CPF ou CNPJ é válido)
+- Tipo (Física ou Jurídica)
+- Data de Nascimento
+- Status (Ativo / Inativo)
+- Data/Hora de inclusão no sistema (Não é preenchida pelo usuário deve-se buscar no momento da inclusão)
+
+Os campos de endereço devem ser:
+- Endereço
+- Número
+- Complemento
+- Bairro
+- CEP
+- Cidade
+- Estado
+
+Informações técnicas:
+ - Front End deve ser desenvolvido em Angular
+ - APIs devem ser desenvolvidas em Asp.Net Core ou Php
+ - Banco de dados relacional de sua preferência 
+
+A entrega dos códigos fontes deve ser realizada via compartilhamento de arquivos ou link de repositório público no git.

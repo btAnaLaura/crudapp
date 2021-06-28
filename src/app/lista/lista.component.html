@@ -1,0 +1,33 @@
+<div class="container">
+    <div class="row" style="margin-bottom: 25px;">
+        <div class="col-md-12">
+            <a class="btn btn-sm btn-primary" href="/cadastro" style="color: white;">CADASTRAR NOVO CLIENTE</a>
+        </div>
+    </div>
+
+    <table>
+        <thead>
+            <th class="titulo">ID</th>
+            <th class="titulo">Nome</th>
+            <th class="titulo">Telefone</th>
+            <th class="titulo">Status</th>
+            <th class="titulo">Cad.Pessoa</th>
+            <th class="titulo">CPF/CNPJ</th>
+            <th class="titulo">Ação</th>
+        </thead>
+        <tbody>
+            <tr *ngFor="let cliente of clientes">
+                <td class="linhas">{{cliente.id}}</td>
+                <td class="linhas">{{cliente.nome}}</td>
+                <td class="linhas">{{cliente.telefone}}</td>
+                <td class="linhas">{{cliente.status}}</td>
+                <td class="linhas">{{cliente.cad_pessoa}}</td>
+                <td class="linhas">{{cliente.cpfcnpj}}</td>
+                <td class="linhas">
+                    <a class="btn btn-sm btn-success" style="margin-left:10px;" routerLink="/form-edit/{{cliente.id}}">Editar</a>
+                    <button class="btn btn-sm btn-danger" style="color: #fff !important; margin: 10px;" (click)="inativarCliente(cliente.id)">Inativar</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>

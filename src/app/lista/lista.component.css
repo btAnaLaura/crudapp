@@ -1,0 +1,12 @@
+.titulo {
+    margin-top: 10px;
+    border: 1px solid #c6c8ca;
+    margin: 15px;
+    text-align: center;
+}
+
+.linhas {
+    border: 1px solid #c6c8ca;
+    margin: 15px;
+    padding: 10px;
+}
